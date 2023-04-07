@@ -44,7 +44,7 @@ wss.on('connection', ws => {
         console.log(error.message);
     });
     share.listen(stream);
-});
+
 
 videoSocket.on('connection', ws => {
     ws.on('message', data => {
@@ -75,7 +75,7 @@ videoSocket.on('connection', ws => {
         }
     })
 })
-
+});
 const connection = share.connect();
 
 const server = app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
